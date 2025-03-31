@@ -9,10 +9,8 @@ function display(event) {
                 if (document.getElementById("storage").value == arr[e][2] || document.getElementById("storage").value == "") {
                     if (document.getElementById("os").value == arr[e][3] || document.getElementById("os").value == "") {
                         if (document.getElementById("graphics").value == arr[e][5] || document.getElementById("graphics").value == "") {
-                            if (parseFloat(arr[e][6]) < parseFloat(document.getElementById("price").value) || document.getElementById("price").value == "") {
-                                p = p + "<li><a href='" + arr[e][7] + "'>" + arr[e][0] + " Laptop, " + arr[e][1] + " RAM, " + arr[e][2] + " Storage, " + arr[e][5] + " Graphics, " + arr[e][3] + ", Amazon ASIN " + arr[e][4] + ", price: " + arr[e][6] + "</a></li>";
-                                found = true;
-                            }
+                            p = p + "<li><a href='" + arr[e][7] + "'>" + arr[e][0] + " Laptop, " + arr[e][1] + " RAM, " + arr[e][2] + " Storage, " + arr[e][5] + " Graphics, " + arr[e][3] + ", Amazon ASIN " + arr[e][4] + ", price: " + arr[e][6] + "</a></li>";
+                            found = true;
                         }
                     }
                 }            
