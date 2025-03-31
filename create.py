@@ -44,4 +44,4 @@ while True:
         os.system("./commit.sh")
     else:
         print("No git push.")
-    time.sleep(60)
+    time.sleep(3600)
