@@ -13,7 +13,7 @@ function display(event) {
                             found = true;
                         }
                     }
-                }            
+                }
             }
         }
     }
