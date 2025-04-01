@@ -3,6 +3,14 @@ import os
 import time
 gc = gspread.service_account("../keys.json")
 stored = ""
+def rm(arr):
+    asin = set()
+    new = []
+    for i in arr:
+        if i[4] not in asin:
+            asin.add(i[4])
+            new.append(i)
+    return new
 while True:
     wks = gc.open("crowdpricecheck.github.io Submission Form (Beta) (Responses)").sheet1.get_all_values()
     wks.pop(0)
@@ -13,6 +21,7 @@ while True:
         e[6] = e[6].replace("$", "").replace(",", "")
         e[4] = e[4].split("/dp/")[1].split("/")[0]
     wks = sorted(wks)
+    wks = rm(arr)
     if wks != stored:
         stored = wks
         f = open("script.js", "w")
